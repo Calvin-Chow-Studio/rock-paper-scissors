@@ -1,6 +1,7 @@
 console.log("hello");
 
-const playerSelection = "rock";
+const playerInput = "rock";
+const playerSelection = playerInput.toLocaleLowerCase;
 const computerSelection = computerPlay();
 
 function computerPlay() {
@@ -15,15 +16,15 @@ function playRound(playerSelection,computerSelection) {
     } else if (playerSelection === "rock" && computerSelection === "scissors" ||
                  playerSelection === "paper" && computerSelection === "rock" || 
                  playerSelection === "scissors" && computerSelection === "scissors") { 
-                    return "win";
+                    return `You win! ${playerSelection} beats ${computerSelection}`;
     } else {
-        return "lose";
+        return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
 }
 
-console.log(playerSelection);
+console.log(playerInput);
 console.log(computerSelection);
-console.log(playRound(playerSelection,computerSelection));
+console.log(playRound(playerInput,computerSelection));
 
 // function compResult() {
 //     if (computerPlay() === 1) {

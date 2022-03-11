@@ -1,5 +1,3 @@
-console.log("hello");
-
 const playerInput = prompt("Rock, Paper or Scissors?");
 const playerSelection = playerInput.toLowerCase();
 const computerSelection = computerPlay();
@@ -45,51 +43,3 @@ function game() {
 }
 
 game();
-
-
-// function game() {
-//     let playRound = 0;
-//     for (let i=0; i<5, i++;) {
-//         if (playRound()[i] === `You win! ${playerSelection} beats ${computerSelection}`) {
-//         playRound++;
-//         } 
-//     }
-//     return playRound;
-// }
-// console.log(game());
-// function compResult() {
-//     if (computerPlay() === 1) {
-//         return "paper";
-//     } else if (computerPlay() === 2) {
-//         return "scissors";
-//     } else {
-//         return "rock";
-//     }
-// }
-// console.log(compResult());
-
-// function playRound(playerSelection,computerSelection) {
-//     if (playerSelection = computerSelection) {
-//         return "win";
-//     // } else if (playerSelection == "rock" && computerSelection == "paper") {
-//     //     return "lose";
-//     // } else if (playerSelection == "rock" && computerSelection == "rock") {
-//     //     return "draw";
-//     // } else if (playerSelection == "paper" && computerSelection == "rock") {
-//     //     return "win";
-//     // } else if (playerSelection == "paper" && computerSelection == "scissors") {
-//     //     return "lose";
-//     // } else if (playerSelection == "paper" && computerSelection == "paper") {
-//     //     return "draw";
-//     // } else if (playerSelection == "scissors" && computerSelection == "rock") {
-//     //     return "lose";
-//     // } else if (playerSelection == "scissors" && computerSelection == "paper") {
-//     //     return "win";
-//     } else { 
-//         return "draw";
-//     }
-// }
-
-
-
-// rock paper scissors

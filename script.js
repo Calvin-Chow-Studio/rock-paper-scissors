@@ -25,10 +25,13 @@ console.log(playRound(playerSelection,computerSelection));
 let playerScore = 0;
 let computerScore = 0;
 let timesDrawn = 0;
+let roundsPlayed = 0;
 
 function game() {
     for (let i = 0; i < 5; i++) { 
-        playRound(playerSelection,computerSelection);;
+        playRound(playerSelection,computerSelection);
+        roundsPlayed++;
+        console.log(playRound(playerSelection,computerSelection)+` Rounds played: ${roundsPlayed}`)
     }
     if (playerSelection === computerSelection) {
         timesDrawn++;
@@ -40,6 +43,14 @@ function game() {
         computerScore++;
     }
     console.log(`You have won: ${playerScore} times ` + `The computer has won ${computerScore} times ` + `Times drawn: ${timesDrawn}`)
+    if (playerScore === 5) {
+        console.log("Player wins!")
+    } else if (computerScore === 5) {
+        console.log("Computer wins")
+    } else {
+        console.log("Keep playing!")
+    }
+
 }
 
 game();

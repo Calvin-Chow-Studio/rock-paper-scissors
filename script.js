@@ -1,7 +1,7 @@
 console.log("hello");
 
-const playerInput = "rock";
-const playerSelection = playerInput.toLocaleLowerCase;
+const playerInput = prompt("Rock, Paper or Scissors?");
+const playerSelection = playerInput.toLowerCase();
 const computerSelection = computerPlay();
 
 function computerPlay() {
@@ -22,10 +22,41 @@ function playRound(playerSelection,computerSelection) {
     }
 }
 
-console.log(playerInput);
-console.log(computerSelection);
-console.log(playRound(playerInput,computerSelection));
+console.log(playRound(playerSelection,computerSelection));
 
+let playerScore = 0;
+let computerScore = 0;
+let timesDrawn = 0;
+
+function game() {
+    for (let i = 0; i < 5; i++) { 
+        playRound(playerSelection,computerSelection);;
+    }
+    if (playerSelection === computerSelection) {
+        timesDrawn++;
+    } else if (playerSelection === "rock" && computerSelection === "scissors" ||
+    playerSelection === "paper" && computerSelection === "rock" || 
+    playerSelection === "scissors" && computerSelection === "scissors") {
+        playerScore++;
+    } else {
+        computerScore++;
+    }
+    console.log(`You have won: ${playerScore} times ` + `The computer has won ${computerScore} times ` + `Times drawn: ${timesDrawn}`)
+}
+
+game();
+
+
+// function game() {
+//     let playRound = 0;
+//     for (let i=0; i<5, i++;) {
+//         if (playRound()[i] === `You win! ${playerSelection} beats ${computerSelection}`) {
+//         playRound++;
+//         } 
+//     }
+//     return playRound;
+// }
+// console.log(game());
 // function compResult() {
 //     if (computerPlay() === 1) {
 //         return "paper";
